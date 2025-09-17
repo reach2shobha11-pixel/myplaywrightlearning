@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { gotoAndVerifyHomePage } from '../testHelpers/gotoAndVerifyHomePage';
 
 const HOME_URL = 'https://the-internet.herokuapp.com/';
-test('test', async ({ page }) => {
+test('Dynamic Controls', async ({ page }) => {
 
     const items = await gotoAndVerifyHomePage(page, HOME_URL);
 
@@ -33,7 +33,7 @@ test('test', async ({ page }) => {
 });
 
 
-test('verify javascript links', async ({ page }) => {
+test(' javascript links', async ({ page }) => {
 
 
     const items = await gotoAndVerifyHomePage(page, HOME_URL);
@@ -80,7 +80,7 @@ test('verify javascript links', async ({ page }) => {
 
 });
 
-test('verify checkboxes', async ({ page }) => {
+test(' checkboxes', async ({ page }) => {
 
 
     const items = await gotoAndVerifyHomePage(page, HOME_URL);
@@ -125,6 +125,6 @@ test('verify checkboxes', async ({ page }) => {
         }
         break;
     }
-
 });
+
 
