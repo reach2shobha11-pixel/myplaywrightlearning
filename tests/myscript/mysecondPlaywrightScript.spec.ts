@@ -8,9 +8,9 @@ test('textbox input', async ({page})=>{
         await page.getByRole('heading', { name: 'Elements' }).click();
         
     try {
-        await page.click('#item');
+        await page.click('#item-0');
     } catch (error) {
-        console.error('Could not click #item-20:', error);
+        console.error('Could not click #item-:', error);
         await page.screenshot({ path: 'error-item-20.png' }); // Optional: take screenshot
         throw error; // Rethrow to fail the test
     }
