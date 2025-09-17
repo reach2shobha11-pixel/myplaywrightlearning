@@ -1,17 +1,12 @@
 import { test, expect } from '@playwright/test';
 import { loginpage } from '../../e2e/pages/loginpage';
+import { gotoAndVerifyHomePage } from '../testHelpers/gotoAndVerifyHomePage';
 
 
 test('test', async ({ page }) => {
 
-   
+   const items = await gotoAndVerifyHomePage(page);
 
-    await page.goto('https://the-internet.herokuapp.com');
-    await expect(page.locator('h1')).toHaveText('Welcome to the-internet');
-    await expect(page.locator('h2')).toHaveText('Available Examples ');
-    const items=await page.locator('li').count();
-
-    await expect(items).toBe(44);
 
 
     for(let i=0;i<items;i++)
@@ -44,12 +39,9 @@ test('verify javascript links',async({page}) =>
     {
 
 
-await page.goto('https://the-internet.herokuapp.com');
-    await expect(page.locator('h1')).toHaveText('Welcome to the-internet');
-    await expect(page.locator('h2')).toHaveText('Available Examples ');
-    const items=await page.locator('li').count();
+const items= await gotoAndVerifyHomePage(page);
 
-    await expect(items).toBe(44);
+  
     for(let i=0;i<items;i++){
 
 
@@ -97,12 +89,9 @@ test('verify checkboxes',async({page}) =>
     {
 
 
-await page.goto('https://the-internet.herokuapp.com');
-    await expect(page.locator('h1')).toHaveText('Welcome to the-internet');
-    await expect(page.locator('h2')).toHaveText('Available Examples ');
-    const items=await page.locator('li').count();
+const items= await gotoAndVerifyHomePage(page);
 
-    await expect(items).toBe(44);
+
     for(let i=0;i<items;i++){
 
 
