@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:parallel": "npx playwright test  tests/parallel.spec.ts --workers=3",
-    "test:serial": "npx playwright test tests/sequence.spec.ts --workers=1"
+    "test:parallel": "npx playwright test  tests/myscript --workers=3",
+    "test:serial": "npx playwright test tests/myscript --workers=1"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,6 @@
     "test": "tests"
   },
   "dependencies": {
-    "fsevents": "^2.3.2",
     "playwright": "^1.55.0",
     "playwright-core": "^1.55.0",
     "undici-types": "^7.10.0"
