@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { loginpage } from '../../e2e/pages/loginpage';
 import { gotoAndVerifyHomePage } from '../testHelpers/gotoAndVerifyHomePage';
 
 
