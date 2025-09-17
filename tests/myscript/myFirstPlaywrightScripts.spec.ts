@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { gotoAndVerifyHomePage } from '../testHelpers/gotoAndVerifyHomePage';
 
-
+const HOME_URL = 'https://the-internet.herokuapp.com/';
 test('test', async ({ page }) => {
 
-   const items = await gotoAndVerifyHomePage(page);
+   const items = await gotoAndVerifyHomePage(page, HOME_URL);
 
 
 
@@ -18,7 +18,7 @@ test('test', async ({ page }) => {
             await dynamicControl.scrollIntoViewIfNeeded();
             await dynamicControl.click();
 
-             await expect(page).toHaveURL('https://the-internet.herokuapp.com/dynamic_controls');
+             await expect(page).toHaveURL(`${HOME_URL}dynamic_controls`);
             await expect(page.getByRole('heading',{ name : 'Dynamic Controls'})).toContainText('Dynamic Controls');
             await expect(page.locator('p')).toContainText('This example demonstrates when elements (e.g., checkbox, input field, etc.) are changed asynchronously.');
             await expect(page.getByRole('button',{name :'Remove'})).toContainText('Remove');
@@ -38,7 +38,7 @@ test('verify javascript links',async({page}) =>
     {
 
 
-const items= await gotoAndVerifyHomePage(page);
+const items= await gotoAndVerifyHomePage(page,HOME_URL);
 
   
     for(let i=0;i<items;i++){
@@ -52,7 +52,7 @@ const items= await gotoAndVerifyHomePage(page);
             await scriptAlert.scrollIntoViewIfNeeded();
             await scriptAlert.click();
 
-             await expect(page).toHaveURL('https://the-internet.herokuapp.com/javascript_alerts');
+             await expect(page).toHaveURL(`${HOME_URL}javascript_alerts`);
             await expect(page.getByRole('heading',{ name : 'JavaScript Alerts'})).toContainText('JavaScript Alerts');
             
             //await expect(page.locator('p')).toContainText('Here are some examples of different JavaScript alerts which can be troublesome for automation');
@@ -88,7 +88,7 @@ test('verify checkboxes',async({page}) =>
     {
 
 
-const items= await gotoAndVerifyHomePage(page);
+const items= await gotoAndVerifyHomePage(page,HOME_URL);
 
 
     for(let i=0;i<items;i++){
@@ -102,7 +102,7 @@ const items= await gotoAndVerifyHomePage(page);
             await scriptAlert.scrollIntoViewIfNeeded();
             await scriptAlert.click();
 
-             await expect(page).toHaveURL('https://the-internet.herokuapp.com/checkboxes');
+             await expect(page).toHaveURL(`${HOME_URL}checkboxes`);
             await expect(page.getByRole('heading',{ name : 'Checkboxes'})).toContainText('Checkboxes');
             
             //await expect(page.locator('p')).toContainText('Here are some examples of different JavaScript alerts which can be troublesome for automation');
