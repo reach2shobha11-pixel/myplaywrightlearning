@@ -9,9 +9,9 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 0,
+    "maxFailures": 1,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -33,7 +33,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -42,14 +42,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       },
       {
         "outputDir": "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "firefox",
         "name": "firefox",
@@ -58,14 +58,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       },
       {
         "outputDir": "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "webkit",
         "name": "webkit",
@@ -74,14 +74,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.55.0",
-    "workers": 3,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
@@ -92,12 +92,12 @@
       "line": 0,
       "specs": [
         {
-          "title": "my second playwright script",
-          "ok": true,
+          "title": "textbox input",
+          "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 0,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -106,103 +106,170 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 18542,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 143105,
+                  "error": {
+                    "message": "Error: page.screenshot: Target page, context or browser has been closed",
+                    "stack": "Error: page.screenshot: Target page, context or browser has been closed\n    at /Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts:14:20",
+                    "location": {
+                      "file": "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts",
+                      "column": 20,
+                      "line": 14
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 12 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 13 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Could not click #item-20:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'error-item-20.png'\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Optional: take screenshot\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m         \u001b[36mthrow\u001b[39m error\u001b[33m;\u001b[39m \u001b[90m// Rethrow to fail the test\u001b[39m\n \u001b[90m 16 |\u001b[39m     }\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Text Box'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts",
+                        "column": 20,
+                        "line": 14
+                      },
+                      "message": "Error: page.screenshot: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 12 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 13 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Could not click #item-20:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'error-item-20.png'\u001b[39m })\u001b[33m;\u001b[39m \u001b[90m// Optional: take screenshot\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m         \u001b[36mthrow\u001b[39m error\u001b[33m;\u001b[39m \u001b[90m// Rethrow to fail the test\u001b[39m\n \u001b[90m 16 |\u001b[39m     }\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Text Box'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts:14:20\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
-                  "stderr": [],
+                  "stderr": [
+                    {
+                      "text": "Could not click #item-20: page.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('#item')\u001b[22m\n\n    at \u001b[90m/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/\u001b[39mtests/myscript/mysecondPlaywrightScript.spec.ts:11:20 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    location: {\n      file: \u001b[32m'/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts'\u001b[39m,\n      line: \u001b[33m11\u001b[39m,\n      column: \u001b[33m20\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Click locator('#item')\"\u001b[39m,\n    apiName: \u001b[32m'page.click'\u001b[39m,\n    params: { selector: \u001b[32m'#item'\u001b[39m, timeout: \u001b[33m0\u001b[39m },\n    group: \u001b[90mundefined\u001b[39m,\n    stepId: \u001b[32m'pw:api@37'\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@37'\u001b[39m,\n      _title: \u001b[32m\"Click locator('#item')\"\u001b[39m,\n      _parentStep: \u001b[90mundefined\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    recoverFromStepError: \u001b[36m[AsyncFunction: recoverFromStepError]\u001b[39m,\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1758142696125\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.click: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('#item')\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: page.click: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('#item')\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at /Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts:11:20'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Test failed with error: page.screenshot: Target page, context or browser has been closed\n    at \u001b[90m/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/\u001b[39mtests/myscript/mysecondPlaywrightScript.spec.ts:14:20 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    location: {\n      file: \u001b[32m'/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts'\u001b[39m,\n      line: \u001b[33m14\u001b[39m,\n      column: \u001b[33m20\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Screenshot'\u001b[39m,\n    apiName: \u001b[32m'page.screenshot'\u001b[39m,\n    params: {\n      path: \u001b[32m'error-item-20.png'\u001b[39m,\n      mask: \u001b[90mundefined\u001b[39m,\n      timeout: \u001b[33m0\u001b[39m,\n      type: \u001b[32m'png'\u001b[39m\n    },\n    group: \u001b[90mundefined\u001b[39m,\n    stepId: \u001b[32m'pw:api@38'\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@38'\u001b[39m,\n      _title: \u001b[32m'Screenshot'\u001b[39m,\n      _parentStep: \u001b[90mundefined\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    recoverFromStepError: \u001b[36m[AsyncFunction: recoverFromStepError]\u001b[39m,\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1758142696168\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.screenshot: Target page, context or browser has been closed'\u001b[39m,\n      stack: \u001b[32m'Error: page.screenshot: Target page, context or browser has been closed\\n'\u001b[39m +\n        \u001b[32m'    at /Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts:14:20'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
                   "retry": 0,
-                  "startTime": "2025-09-17T19:03:30.750Z",
+                  "startTime": "2025-09-17T20:55:51.817Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts",
+                    "column": 20,
+                    "line": 14
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "f2b67f50fd2a39f95365-3b0adbc975a7dd62a5a5",
+          "id": "f2b67f50fd2a39f95365-129554a0f5bd478e9874",
           "file": "myscript/mysecondPlaywrightScript.spec.ts",
           "line": 4,
-          "column": 6
+          "column": 5
         },
         {
-          "title": "my second playwright script",
+          "title": "checkbox input",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f2b67f50fd2a39f95365-1325a45bd8249e59ad4d",
+          "file": "myscript/mysecondPlaywrightScript.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "textbox input",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "firefox",
               "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 21617,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T19:03:30.783Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "f2b67f50fd2a39f95365-1c1510dfd65c2942054b",
+          "id": "f2b67f50fd2a39f95365-b4a79dc86b51c8c49dac",
           "file": "myscript/mysecondPlaywrightScript.spec.ts",
           "line": 4,
-          "column": 6
+          "column": 5
         },
         {
-          "title": "my second playwright script",
+          "title": "checkbox input",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f2b67f50fd2a39f95365-14c8701a98497b414bbe",
+          "file": "myscript/mysecondPlaywrightScript.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "textbox input",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "webkit",
               "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 22768,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T19:03:30.831Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "f2b67f50fd2a39f95365-e488e8197d7bd4cc2fc3",
+          "id": "f2b67f50fd2a39f95365-0e2b7698a3a55fee24e1",
           "file": "myscript/mysecondPlaywrightScript.spec.ts",
           "line": 4,
-          "column": 6
+          "column": 5
+        },
+        {
+          "title": "checkbox input",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f2b67f50fd2a39f95365-9370e8215081455e41b2",
+          "file": "myscript/mysecondPlaywrightScript.spec.ts",
+          "line": 37,
+          "column": 5
         }
       ]
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
   "stats": {
-    "startTime": "2025-09-17T19:03:28.888Z",
-    "duration": 32077.585999999996,
-    "expected": 3,
-    "skipped": 0,
-    "unexpected": 0,
+    "startTime": "2025-09-17T20:55:51.089Z",
+    "duration": 145525.75300000003,
+    "expected": 0,
+    "skipped": 5,
+    "unexpected": 1,
     "flaky": 0
   }
 }
