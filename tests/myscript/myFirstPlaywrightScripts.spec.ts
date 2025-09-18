@@ -64,11 +64,13 @@ test(' javascript links', async ({ page }) => {
                 // Explicitly wait for the button to be visible before clicking
                 await page.locator('button').nth(i).waitFor({ state: 'visible', timeout: 10000 });
                 console.log("button text is " + await page.locator('button').nth(i).textContent());
-                await page.locator('button').nth(i).click();
-                // Listen for dialog and accept it
+                
+                // Listen for dialog and accept it BEFORE clicking
                 page.once('dialog', async dialog => {
                     await dialog.accept();
                 });
+                
+                await page.locator('button').nth(i).click();
 
             }
 

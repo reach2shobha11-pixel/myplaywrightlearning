@@ -10,8 +10,8 @@ test('textbox input', async ({page})=>{
     try {
         await page.click('#item-0');
     } catch (error) {
-        console.error('Could not click #item-:', error);
-        await page.screenshot({ path: 'error-item-20.png' }); // Optional: take screenshot
+        console.error('Could not click #item-0:', error);
+        await page.screenshot({ path: 'error-item-0.png' }); // Optional: take screenshot
         throw error; // Rethrow to fail the test
     }
         await expect(page.getByRole('heading', { name: 'Text Box' })).toBeVisible();
@@ -38,7 +38,7 @@ test('checkbox input', async ({page})=>{
 
 await page.goto(`${HOME_URL}`);
 await page.getByRole('heading',{name:'Elements'}).click();
-await page.click('id=item-1');
+await page.click('#item-1');
 await expect(page.getByRole('heading',{name:'Check Box'})).toBeVisible();
 await expect(page).toHaveURL(`${HOME_URL}checkbox`);
 const expandAll = page.locator('button[title="Expand all"]');
