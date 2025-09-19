@@ -2,7 +2,7 @@ import {expect, test} from '@playwright/test';
 
 const HOME_URL = 'https://demoqa.com/';
 test('textbox input', async ({page})=>{
-
+page.setDefaultTimeout(2000);
     try {
         await page.goto(HOME_URL);
         await page.getByRole('heading', { name: 'Elements' }).click();
