@@ -11,7 +11,7 @@ test('dropdown selection', async ({ page }) => {
   expect(selectedValue).toBe('4');
 
   // Select a value from the multi-select drop-down
-  await page.click('.css-2b097c-container'); // Click to open the multi-select
+  await page.click('[data-testid="multi-select-dropdown"]'); // Click to open the multi-select
   await page.getByText('Green').click();
   await page.getByText('Blue').click();
 
