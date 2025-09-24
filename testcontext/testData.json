@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://demoqa.com/text-box",
+    "userName": "john",
+    "email": "john@example.com",
+    "currentAddress": "789 Main Road, Boston, USA",
+    "permanentAddress": "101 First Ave, Boston, USA"
+ },
+ {
+    "url": "https://demoqa.com/text-box",
+    "userName": "john1",
+    "email": "john1@example.com",
+    "currentAddress": "789 Main Road, Boston, USA",
+    "permanentAddress": "101 First Ave, Boston, USA"
+ }
+]
