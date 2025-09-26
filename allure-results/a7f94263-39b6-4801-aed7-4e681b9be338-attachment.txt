@@ -1,0 +1,45 @@
+Test failed with error: page.goto: Timeout 2000ms exceeded.
+Call log:
+  - navigating to "https://demoqa.com/", waiting until "load"
+
+    at /Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts:7:20 {
+  name: 'TimeoutError',
+  [Symbol(step)]: {
+    location: {
+      file: '/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts',
+      line: 7,
+      column: 20
+    },
+    category: 'pw:api',
+    title: 'Navigate to "/"',
+    apiName: 'page.goto',
+    params: { url: 'https://demoqa.com/', waitUntil: 'load', timeout: 2000 },
+    group: undefined,
+    stepId: 'pw:api@27',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@27',
+      _title: 'Navigate to "/"',
+      _parentStep: undefined,
+      skip: [Function (anonymous)]
+    },
+    recoverFromStepError: [AsyncFunction: recoverFromStepError],
+    complete: [Function: complete],
+    endWallTime: 1758824967073,
+    error: {
+      message: 'TimeoutError: page.goto: Timeout 2000ms exceeded.\n' +
+        'Call log:\n' +
+        '\x1B[2m  - navigating to "https://demoqa.com/", waiting until "load"\x1B[22m\n',
+      stack: 'TimeoutError: page.goto: Timeout 2000ms exceeded.\n' +
+        'Call log:\n' +
+        '\x1B[2m  - navigating to "https://demoqa.com/", waiting until "load"\x1B[22m\n' +
+        '\n' +
+        '    at /Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/tests/myscript/mysecondPlaywrightScript.spec.ts:7:20',
+      cause: undefined
+    }
+  }
+}

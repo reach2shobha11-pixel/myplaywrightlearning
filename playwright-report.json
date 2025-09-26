@@ -11,15 +11,35 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
       [
         "json",
         {
           "outputFile": "playwright-report.json"
         }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ],
+      [
+        "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ],
+      [
+        "/Users/chinnu/Documents/playwrightdemo/myplaywrightlearning/scripts/myReporter.js",
+        null
       ]
     ],
     "reportSlowTests": {
@@ -33,7 +53,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -49,7 +69,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "firefox",
         "name": "firefox",
@@ -65,7 +85,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "webkit",
         "name": "webkit",
@@ -79,20 +99,20 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "patch",
+    "updateSourceMethod": "3way",
     "version": "1.55.0",
     "workers": 3,
     "webServer": null
   },
   "suites": [
     {
-      "title": "myscript/mysecondPlaywrightScript.spec.ts",
-      "file": "myscript/mysecondPlaywrightScript.spec.ts",
+      "title": "fixtures/testFixtures.spec.ts",
+      "file": "fixtures/testFixtures.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "textbox input",
+          "title": "use userName fixture",
           "ok": true,
           "tags": [],
           "tests": [
@@ -102,133 +122,30 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10363,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T21:45:55.784Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f2b67f50fd2a39f95365-129554a0f5bd478e9874",
-          "file": "myscript/mysecondPlaywrightScript.spec.ts",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "checkbox input",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 12717,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "number of checked items are 17\n"
-                    },
-                    {
-                      "text": "number of unchecked items are 17\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T21:45:55.807Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f2b67f50fd2a39f95365-1325a45bd8249e59ad4d",
-          "file": "myscript/mysecondPlaywrightScript.spec.ts",
-          "line": 37,
-          "column": 5
-        },
-        {
-          "title": "textbox input",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
               "results": [
                 {
                   "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 15817,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T21:45:55.809Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f2b67f50fd2a39f95365-b4a79dc86b51c8c49dac",
-          "file": "myscript/mysecondPlaywrightScript.spec.ts",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "checkbox input",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10105,
+                  "duration": 5758,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "number of checked items are 17\n"
+                      "text": "permanentAddress Fixture teardown\n"
                     },
                     {
-                      "text": "number of unchecked items are 17\n"
+                      "text": "currentAddress Fixture teardown\n"
+                    },
+                    {
+                      "text": "email Fixture teardown\n"
+                    },
+                    {
+                      "text": "Fixture teardown\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-09-17T21:46:12.080Z",
+                  "startTime": "2025-09-25T20:28:26.786Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -236,94 +153,19 @@
               "status": "expected"
             }
           ],
-          "id": "f2b67f50fd2a39f95365-14c8701a98497b414bbe",
-          "file": "myscript/mysecondPlaywrightScript.spec.ts",
-          "line": 37,
-          "column": 5
-        },
-        {
-          "title": "textbox input",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 9637,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T21:46:12.789Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f2b67f50fd2a39f95365-0e2b7698a3a55fee24e1",
-          "file": "myscript/mysecondPlaywrightScript.spec.ts",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "checkbox input",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 9391,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "number of checked items are 17\n"
-                    },
-                    {
-                      "text": "number of unchecked items are 17\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-17T21:46:16.109Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f2b67f50fd2a39f95365-9370e8215081455e41b2",
-          "file": "myscript/mysecondPlaywrightScript.spec.ts",
-          "line": 37,
-          "column": 5
+          "id": "435d892ee1e745adf878-c20f4900ea7b2d2572e9",
+          "file": "fixtures/testFixtures.spec.ts",
+          "line": 31,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-17T21:45:54.936Z",
-    "duration": 31063.117,
-    "expected": 6,
+    "startTime": "2025-09-25T20:28:24.684Z",
+    "duration": 8590.04600000009,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -1,0 +1,13 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.59004600000009">
+<testsuite name="fixtures/testFixtures.spec.ts" timestamp="2025-09-25T20:28:26.056Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.758" errors="0">
+<testcase name="use userName fixture" classname="fixtures/testFixtures.spec.ts" time="5.758">
+<system-out>
+<![CDATA[permanentAddress Fixture teardown
+currentAddress Fixture teardown
+email Fixture teardown
+Fixture teardown
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

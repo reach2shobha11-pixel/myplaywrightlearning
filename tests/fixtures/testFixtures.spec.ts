@@ -38,4 +38,8 @@ test('use userName fixture', async ({ page, userName ,email,currentAddress,perma
   await expect(page.locator('#userEmail')).toHaveValue(email);
   await expect(page.locator('#currentAddress')).toHaveValue(currentAddress);
   await expect(page.locator('#permanentAddress')).toHaveValue(permanentAddress);
-});
+
+await page.screenshot({path : 'screenshot.png'  });
+}
+
+);

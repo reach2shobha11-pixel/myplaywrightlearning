@@ -1,0 +1,7 @@
+{
+  url: 'https://demoqa.com/text-box',
+  userName: 'john',
+  email: 'john@example.com',
+  currentAddress: '789 Main Road, Boston, USA',
+  permanentAddress: '101 First Ave, Boston, USA'
+}
